@@ -1,13 +1,14 @@
 import 'package:alkaramah/ui/shared/colors.dart';
 import 'package:alkaramah/ui/shared/custom_widgets/club_presidents.dart';
 import 'package:alkaramah/ui/shared/custom_widgets/club_titles.dart';
+import 'package:alkaramah/ui/shared/custom_widgets/custom_border.dart';
 import 'package:alkaramah/ui/shared/custom_widgets/custom_container_meusiam.dart';
 import 'package:alkaramah/ui/shared/custom_widgets/custom_container_youtube.dart';
 import 'package:alkaramah/ui/shared/custom_widgets/custom_text.dart';
 import 'package:alkaramah/ui/shared/utils.dart';
 import 'package:flutter/material.dart';
 
-class MeusiamView extends StatelessWidget {
+class MeuseumView extends StatefulWidget {
   final List<String> items = [
     'alkaramah_1',
     'alkaramah_2',
@@ -29,9 +30,17 @@ class MeusiamView extends StatelessWidget {
     'كرة السلة في نادي الكرامة ',
   ];
 
+  MeuseumView({super.key});
+
+  @override
+  State<MeuseumView> createState() => _MeuseumViewState();
+}
+
+class _MeuseumViewState extends State<MeuseumView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor,
       body: Padding(
         padding: EdgeInsetsDirectional.only(
           start: screenWidth(20.5714),
@@ -40,9 +49,22 @@ class MeusiamView extends StatelessWidget {
         child: ListView(
           shrinkWrap: true,
           children: [
-            CustomText(
-              text: 'عن النادي',
-              styleType: TextStyleType.TITLE,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: screenWidth(70)),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CustomText(
+                    text: 'عن النادي',
+                    styleType: TextStyleType.TITLE,
+                  ),
+                  CustomBorder(
+                    containerWidth1: 10,
+                    containerWidth2: 12,
+                    containerWidth3: 16,
+                  ),
+                ],
+              ),
             ),
             Container(
               margin: EdgeInsetsDirectional.only(
@@ -58,15 +80,15 @@ class MeusiamView extends StatelessWidget {
                   physics: BouncingScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                   itemExtent: 340,
-                  itemCount: items.length,
+                  itemCount: widget.items.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
                       padding: EdgeInsetsDirectional.only(
                         end: screenWidth(41.1428),
                       ),
                       child: CustomContainerMeusiam(
-                        text: items2[index].toString(),
-                        nameImage: items[index],
+                        text: widget.items2[index].toString(),
+                        nameImage: widget.items[index],
                         containerWidth: true,
                       ),
                     );
@@ -94,9 +116,22 @@ class MeusiamView extends StatelessWidget {
                 ),
               ),
             ),
-            CustomText(
-              text: 'رؤساء نادي الكرامة',
-              styleType: TextStyleType.TITLE,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: screenWidth(70)),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CustomText(
+                    text: 'رؤساء نادي الكرامة',
+                    styleType: TextStyleType.TITLE,
+                  ),
+                  CustomBorder(
+                    containerWidth1: 10,
+                    containerWidth2: 12,
+                    containerWidth3: 16,
+                  ),
+                ],
+              ),
             ),
             Container(
               margin: EdgeInsetsDirectional.only(
@@ -119,9 +154,22 @@ class MeusiamView extends StatelessWidget {
                 },
               ),
             ),
-            CustomText(
-              text: 'ألقاب نادي الكرامة',
-              styleType: TextStyleType.TITLE,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: screenWidth(70)),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CustomText(
+                    text: 'ألقاب نادي الكرامة',
+                    styleType: TextStyleType.TITLE,
+                  ),
+                  CustomBorder(
+                    containerWidth1: 10,
+                    containerWidth2: 12,
+                    containerWidth3: 16,
+                  ),
+                ],
+              ),
             ),
             Container(
               margin: EdgeInsetsDirectional.only(
@@ -144,9 +192,22 @@ class MeusiamView extends StatelessWidget {
                 },
               ),
             ),
-            CustomText(
-              text: 'الجوائز الفردية للاعبي  الكرامة',
-              styleType: TextStyleType.TITLE,
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: screenWidth(70)),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CustomText(
+                    text: 'الجوائز الفردية للاعبي  الكرامة',
+                    styleType: TextStyleType.TITLE,
+                  ),
+                  CustomBorder(
+                    containerWidth1: 3,
+                    containerWidth2: 12,
+                    containerWidth3: 8,
+                  ),
+                ],
+              ),
             ),
             Container(
               margin: EdgeInsetsDirectional.only(

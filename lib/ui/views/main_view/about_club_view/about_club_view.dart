@@ -4,14 +4,14 @@ import 'package:alkaramah/ui/shared/custom_widgets/custom_text.dart';
 import 'package:alkaramah/ui/shared/utils.dart';
 import 'package:flutter/material.dart';
 
-class AboutClup extends StatefulWidget {
-  const AboutClup({super.key});
+class AboutClubView extends StatefulWidget {
+  const AboutClubView({super.key});
 
   @override
-  State<AboutClup> createState() => _AboutClupState();
+  State<AboutClubView> createState() => _AboutClubViewState();
 }
 
-class _AboutClupState extends State<AboutClup> {
+class _AboutClubViewState extends State<AboutClubView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
