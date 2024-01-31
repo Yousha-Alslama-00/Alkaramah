@@ -1,14 +1,9 @@
 import 'dart:convert';
 
+import 'package:alkaramah/core/data/models/token_info.dart';
+import 'package:alkaramah/core/enums/data_type.dart';
 import 'package:get/get.dart';
-import 'package:http/http.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:sp1_e_commerce/core/data/models/cart_model.dart';
-import 'package:sp1_e_commerce/core/data/models/post_model.dart';
-import 'package:sp1_e_commerce/core/data/models/product_info.dart';
-import 'package:sp1_e_commerce/core/data/models/token_info.dart';
-import 'package:sp1_e_commerce/core/enums/data_type.dart';
-import 'package:sp1_e_commerce/main.dart';
 
 class SharedPrefrenceRepository {
   SharedPreferences pref = Get.find<SharedPreferences>();
@@ -100,22 +95,7 @@ class SharedPrefrenceRepository {
     if (pref.containsKey(PREF_APP_LANG)) {
       return getPrefrnce(PREF_APP_LANG);
     } else {
-      return 'en';
-    }
-  }
-
-  void setCartList(List<CartModel> list) {
-    setPrefrnce(
-        type: DataType.STRING,
-        key: PREF_CART_LIST,
-        value: CartModel.encode(list));
-  }
-
-  List<CartModel> getCartList() {
-    if (pref.containsKey(PREF_CART_LIST)) {
-      return CartModel.decode(getPrefrnce(PREF_CART_LIST));
-    } else {
-      return [];
+      return 'ar';
     }
   }
 
