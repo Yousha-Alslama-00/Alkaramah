@@ -1,8 +1,8 @@
+import 'package:alkaramah/ui/shared/colors.dart';
+import 'package:alkaramah/ui/shared/utils.dart';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:sp1_e_commerce/ui/shared/colors.dart';
-import 'package:sp1_e_commerce/ui/shared/utils.dart';
 
 enum MessageType {
   INFO,
@@ -18,14 +18,6 @@ class CustomToast {
   }) {
     String imageName = 'info';
     Color shadowColor = AppColors.blueColor;
-
-
-
-
-
-
-
-    
 
     switch (type) {
       case MessageType.INFO:

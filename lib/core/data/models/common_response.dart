@@ -1,12 +1,9 @@
-import 'package:sp1_e_commerce/core/data/models/token_info.dart';
-import 'package:sp1_e_commerce/core/data/models/user_info.dart';
-
 class CommonResponse<T> {
   int? statusCode;
   late String message;
   T? data;
 
- // CommonResponse(this.data, this.message, this.statusCode);
+  // CommonResponse(this.data, this.message, this.statusCode);
 
   CommonResponse.fromJson(Map<String, dynamic> json) {
     statusCode = json['statusCode'];

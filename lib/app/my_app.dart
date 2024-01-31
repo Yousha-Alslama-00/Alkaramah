@@ -1,15 +1,19 @@
+import 'package:alkaramah/app/my_app_controller.dart';
+import 'package:alkaramah/core/data/repository/shared_prefrence_repository.dart';
+import 'package:alkaramah/core/services/connectivity_service.dart';
+import 'package:alkaramah/core/translation/app_translation.dart';
+import 'package:alkaramah/ui/shared/custom_widgets/custom_container_horizontal.dart';
+import 'package:alkaramah/ui/shared/utils.dart';
+import 'package:alkaramah/ui/views/about_clup/about_clup_view.dart';
+import 'package:alkaramah/ui/views/meusiam.dart/meusiam_view.dart';
+import 'package:alkaramah/ui/views/playar_view/admins_players_view.dart';
+import 'package:alkaramah/ui/views/results/results_view.dart';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
-import 'package:sp1_e_commerce/app/my_app_controller.dart';
-import 'package:sp1_e_commerce/core/data/repository/shared_prefrence_repository.dart';
-import 'package:sp1_e_commerce/core/services/connectivity_service.dart';
-import 'package:sp1_e_commerce/core/translation/app_translation.dart';
-import 'package:sp1_e_commerce/ui/shared/utils.dart';
 
-import 'package:sp1_e_commerce/ui/views/splash_view/splash_view.dart';
-
+// ignore: must_be_immutable
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
@@ -31,7 +35,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: SplashView(),
+        home: ResultsView(),
       ),
     );
   }
