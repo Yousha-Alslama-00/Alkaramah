@@ -1,11 +1,17 @@
 import 'package:alkaramah/ui/shared/colors.dart';
+import 'package:alkaramah/ui/shared/custom_widgets/custom_background.dart';
 import 'package:alkaramah/ui/shared/utils.dart';
 import 'package:flutter/material.dart';
+
 class CustomCarouselRow extends StatelessWidget {
   final String iconPath;
   final String title;
+  final CustomBackground? customBackground;
   const CustomCarouselRow(
-      {super.key, required this.iconPath, required this.title});
+      {super.key,
+      required this.iconPath,
+      required this.title,
+      this.customBackground});
 
   @override
   Widget build(BuildContext context) {

@@ -3,9 +3,9 @@ import 'package:alkaramah/ui/shared/utils.dart';
 import 'package:flutter/material.dart';
 
 class CustomBorder extends StatefulWidget {
-  final int containerWidth1;
-  final int containerWidth2;
-  final int containerWidth3;
+  final double containerWidth1;
+  final double containerWidth2;
+  final double containerWidth3;
   const CustomBorder(
       {super.key,
       required this.containerWidth1,

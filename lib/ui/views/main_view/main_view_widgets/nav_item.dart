@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class Item extends StatefulWidget {
-  final String icon;
+  final String? icon;
   final String text;
   final bool? isSelected;
   final Function onTap;
   final Function? ondTap;
   const Item(
       {super.key,
-      required this.icon,
+      this.icon,
       this.isSelected = false,
       required this.onTap,
       this.ondTap,
@@ -36,7 +36,7 @@ class _ItemState extends State<Item> {
           child: Column(
             children: [
               SvgPicture.asset(
-                'assets/images/svgs/${widget.icon}.svg',
+                'assets/images/svgs/${widget.icon ?? ''}.svg',
                 color: widget.isSelected!
                     ? AppColors.orangeColor
                     : AppColors.whiteColor,

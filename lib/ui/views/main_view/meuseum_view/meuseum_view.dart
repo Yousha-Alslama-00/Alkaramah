@@ -6,7 +6,10 @@ import 'package:alkaramah/ui/shared/custom_widgets/custom_container_meusiam.dart
 import 'package:alkaramah/ui/shared/custom_widgets/custom_container_youtube.dart';
 import 'package:alkaramah/ui/shared/custom_widgets/custom_text.dart';
 import 'package:alkaramah/ui/shared/utils.dart';
+import 'package:alkaramah/ui/views/club_history/club_history_view.dart';
+import 'package:alkaramah/ui/views/main_view/news_view/news_view.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MeuseumView extends StatefulWidget {
   final List<String> items = [
@@ -50,18 +53,32 @@ class _MeuseumViewState extends State<MeuseumView> {
           shrinkWrap: true,
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: screenWidth(70)),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              padding: EdgeInsets.symmetric(
+                horizontal: screenWidth(70),
+                vertical: screenWidth(41.14),
+              ),
+              child: Row(
                 children: [
-                  CustomText(
-                    text: 'عن النادي',
-                    styleType: TextStyleType.TITLE,
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CustomText(
+                        text: 'عن النادي',
+                        styleType: TextStyleType.TITLE,
+                      ),
+                      CustomBorder(
+                        containerWidth1: 10,
+                        containerWidth2: 22,
+                        containerWidth3: 16,
+                      ),
+                    ],
                   ),
-                  CustomBorder(
-                    containerWidth1: 10,
-                    containerWidth2: 12,
-                    containerWidth3: 16,
+                  Spacer(),
+                  InkWell(
+                    onTap: () {
+                      Get.to(ClubHistoryView());
+                    },
+                    child: Text("مشاهدة الكل"),
                   ),
                 ],
               ),
@@ -117,7 +134,10 @@ class _MeuseumViewState extends State<MeuseumView> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: screenWidth(70)),
+              padding: EdgeInsets.symmetric(
+                horizontal: screenWidth(70),
+                vertical: screenWidth(41.14),
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -126,9 +146,9 @@ class _MeuseumViewState extends State<MeuseumView> {
                     styleType: TextStyleType.TITLE,
                   ),
                   CustomBorder(
-                    containerWidth1: 10,
+                    containerWidth1: 5,
                     containerWidth2: 12,
-                    containerWidth3: 16,
+                    containerWidth3: 10,
                   ),
                 ],
               ),
@@ -155,7 +175,10 @@ class _MeuseumViewState extends State<MeuseumView> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: screenWidth(70)),
+              padding: EdgeInsets.symmetric(
+                horizontal: screenWidth(70),
+                vertical: screenWidth(41.14),
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -164,9 +187,9 @@ class _MeuseumViewState extends State<MeuseumView> {
                     styleType: TextStyleType.TITLE,
                   ),
                   CustomBorder(
-                    containerWidth1: 10,
-                    containerWidth2: 12,
-                    containerWidth3: 16,
+                    containerWidth1: 5,
+                    containerWidth2: 14,
+                    containerWidth3: 12,
                   ),
                 ],
               ),
@@ -193,7 +216,10 @@ class _MeuseumViewState extends State<MeuseumView> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: screenWidth(70)),
+              padding: EdgeInsets.symmetric(
+                horizontal: screenWidth(70),
+                vertical: screenWidth(41.14),
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -202,8 +228,8 @@ class _MeuseumViewState extends State<MeuseumView> {
                     styleType: TextStyleType.TITLE,
                   ),
                   CustomBorder(
-                    containerWidth1: 3,
-                    containerWidth2: 12,
+                    containerWidth1: 2.8,
+                    containerWidth2: 10,
                     containerWidth3: 8,
                   ),
                 ],
@@ -240,6 +266,26 @@ class _MeuseumViewState extends State<MeuseumView> {
               ),
             ),
             Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: screenWidth(70),
+                vertical: screenWidth(21.14),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CustomText(
+                    text: 'أجمل أهداف نادي الكرامة',
+                    styleType: TextStyleType.TITLE,
+                  ),
+                  CustomBorder(
+                    containerWidth1: 3,
+                    containerWidth2: 14,
+                    containerWidth3: 10,
+                  ),
+                ],
+              ),
+            ),
+            Padding(
               padding: EdgeInsetsDirectional.only(
                 top: screenWidth(40.2857),
               ),
@@ -265,7 +311,7 @@ class _MeuseumViewState extends State<MeuseumView> {
               ),
             ),
             SizedBox(
-              height: 100,
+              height: screenWidth(10.28),
             ),
           ],
         ),

@@ -1,6 +1,7 @@
 import 'package:alkaramah/ui/shared/colors.dart';
 import 'package:alkaramah/ui/shared/custom_widgets/custom_border.dart';
 import 'package:alkaramah/ui/shared/custom_widgets/custom_carousel_row.dart';
+import 'package:alkaramah/ui/shared/custom_widgets/custom_news.dart';
 import 'package:alkaramah/ui/shared/utils.dart';
 import 'package:alkaramah/ui/views/main_view/home_view/home_controller.dart';
 import 'package:alkaramah/ui/views/main_view/news_view/news_view.dart';
@@ -9,6 +10,7 @@ import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+
 class HomeView extends StatefulWidget {
   const HomeView({
     super.key,
@@ -30,18 +32,20 @@ class _HomeViewState extends State<HomeView> {
           children: [
             Padding(
               padding: EdgeInsetsDirectional.only(
-                  top: screenWidth(20),
-                  start: screenWidth(70),
-                  end: screenWidth(70)),
+                top: screenWidth(20),
+                start: screenWidth(70),
+                end: screenWidth(70),
+              ),
               child: Column(
                 children: [
                   Column(
                     children: [
                       Padding(
-                        padding:
-                            EdgeInsets.symmetric(horizontal: screenWidth(40)),
+                        padding: EdgeInsets.symmetric(
+                          horizontal: screenWidth(40),
+                        ),
                         child: SizedBox(
-                          height: 225,
+                          height: screenWidth(1.55),
                           child: CarouselSlider.builder(
                             itemCount: 3,
                             itemBuilder: (BuildContext context, int itemIndex,
@@ -159,7 +163,7 @@ class _HomeViewState extends State<HomeView> {
                               ),
                             ),
                             options: CarouselOptions(
-                              height: 220,
+                              height: screenWidth(1.87),
                               aspectRatio: 16,
                               viewportFraction: 1,
                               initialPage: 0,
@@ -224,329 +228,29 @@ class _HomeViewState extends State<HomeView> {
                               ],
                             ),
                             InkWell(
-                                onTap: () {
-                                  Get.to(NewsView());
-                                },
-                                child: Text("مشاهدة الكل")),
+                              onTap: () {
+                                Get.to(NewsView());
+                              },
+                              child: Text("مشاهدة الكل"),
+                            ),
                           ],
                         ),
                       ),
                       Container(
                         width: screenWidth(1),
                         height: screenHeight(5.5),
-                        child: ListView(
-                            scrollDirection: Axis.horizontal,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                  width: screenWidth(1.12),
-                                  height: screenWidth(3.5),
-                                  decoration: BoxDecoration(
-                                      color: Color.fromARGB(94, 149, 168, 207),
-                                      borderRadius: BorderRadius.circular(10)),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        width: screenWidth(3),
-                                        height: screenWidth(3.5),
-                                        decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                                fit: BoxFit.fill,
-                                                image: AssetImage(
-                                                  "assets/images/pngs/Rectangle 109.png",
-                                                )),
-                                            color:
-                                                Color.fromARGB(94, 44, 148, 30),
-                                            borderRadius:
-                                                BorderRadius.circular(10)),
-                                      ),
-                                      Container(
-                                        width: screenWidth(1.8),
-                                        height: screenWidth(3.5),
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(10)),
-                                        child: Column(
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "نادي الكرامة الرياضي نادي الكرامة الرياضي نادي الكرامة الرياضي نادي الكرامة الرياضي نادي الكرامة الريا",
-                                                style: TextStyle(
-                                                    fontSize: screenWidth(24)),
-                                                maxLines: 2,
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  EdgeInsetsDirectional.only(
-                                                      top: screenWidth(70)),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceAround,
-                                                children: [
-                                                  Row(
-                                                    children: [
-                                                      Icon(
-                                                        Icons
-                                                            .remove_red_eye_outlined,
-                                                        size: screenWidth(20),
-                                                      ),
-                                                      Text(
-                                                        " 300 ",
-                                                        style: TextStyle(
-                                                            fontSize:
-                                                                screenWidth(
-                                                                    26)),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  Row(
-                                                    children: [
-                                                      Icon(
-                                                        Icons
-                                                            .watch_later_outlined,
-                                                        size: screenWidth(22),
-                                                      ),
-                                                      Text(
-                                                        " 4 ",
-                                                        style: TextStyle(
-                                                            fontSize:
-                                                                screenWidth(
-                                                                    26)),
-                                                      ),
-                                                      Text(
-                                                        "أيام",
-                                                        style: TextStyle(
-                                                            fontSize:
-                                                                screenWidth(
-                                                                    26)),
-                                                      )
-                                                    ],
-                                                  ),
-                                                ],
-                                              ),
-                                            )
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
+                        child: ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: 10,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Padding(
+                              padding: EdgeInsetsDirectional.all(
+                                screenWidth(30.42),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                  width: screenWidth(1.1),
-                                  height: screenWidth(3.5),
-                                  decoration: BoxDecoration(
-                                      color:
-                                          const Color.fromARGB(94, 30, 67, 148),
-                                      borderRadius: BorderRadius.circular(10)),
-                                  child: Row(
-                                    children: [
-                                      Container(
-                                        width: screenWidth(3),
-                                        height: screenWidth(3.5),
-                                        decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                                fit: BoxFit.fill,
-                                                image: AssetImage(
-                                                  "assets/images/pngs/Rectangle 109.png",
-                                                )),
-                                            color:
-                                                Color.fromARGB(94, 44, 148, 30),
-                                            borderRadius:
-                                                BorderRadius.circular(10)),
-                                      ),
-                                      Container(
-                                        width: screenWidth(1.8),
-                                        height: screenWidth(3.5),
-                                        decoration: BoxDecoration(
-                                            borderRadius:
-                                                BorderRadius.circular(10)),
-                                        child: Column(
-                                          children: [
-                                            Padding(
-                                              padding:
-                                                  const EdgeInsets.all(8.0),
-                                              child: Text(
-                                                "نادي الكرامة الرياضي نادي الكرامة الرياضي نادي الكرامة الرياضي نادي الكرامة الرياضي نادي الكرامة الريا",
-                                                style: TextStyle(
-                                                    fontSize: screenWidth(24)),
-                                                maxLines: 2,
-                                              ),
-                                            ),
-                                            Padding(
-                                              padding:
-                                                  EdgeInsetsDirectional.only(
-                                                      top: screenWidth(70)),
-                                              child: Row(
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceAround,
-                                                children: [
-                                                  Row(
-                                                    children: [
-                                                      Icon(
-                                                        Icons
-                                                            .remove_red_eye_outlined,
-                                                        size: screenWidth(20),
-                                                      ),
-                                                      Text(
-                                                        " 300 ",
-                                                        style: TextStyle(
-                                                            fontSize:
-                                                                screenWidth(
-                                                                    26)),
-                                                      ),
-                                                    ],
-                                                  ),
-                                                  Row(
-                                                    children: [
-                                                      Icon(
-                                                        Icons
-                                                            .watch_later_outlined,
-                                                        size: screenWidth(22),
-                                                      ),
-                                                      Text(
-                                                        " 4 ",
-                                                        style: TextStyle(
-                                                            fontSize:
-                                                                screenWidth(
-                                                                    26)),
-                                                      ),
-                                                      Text(
-                                                        "أيام",
-                                                        style: TextStyle(
-                                                            fontSize:
-                                                                screenWidth(
-                                                                    26)),
-                                                      )
-                                                    ],
-                                                  ),
-                                                ],
-                                              ),
-                                            )
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Material(
-                                  elevation: 10,
-                                  borderRadius:
-                                      BorderRadiusDirectional.circular(10),
-                                  child: Container(
-                                    width: screenWidth(1.1),
-                                    height: screenWidth(3.5),
-                                    decoration: BoxDecoration(
-                                        color: const Color.fromARGB(
-                                            94, 30, 67, 148),
-                                        borderRadius:
-                                            BorderRadius.circular(10)),
-                                    child: Row(
-                                      children: [
-                                        Container(
-                                          width: screenWidth(3),
-                                          height: screenWidth(3.5),
-                                          decoration: BoxDecoration(
-                                              image: DecorationImage(
-                                                  fit: BoxFit.fill,
-                                                  image: AssetImage(
-                                                    "assets/images/pngs/Rectangle 109.png",
-                                                  )),
-                                              color: Color.fromARGB(
-                                                  94, 44, 148, 30),
-                                              borderRadius:
-                                                  BorderRadius.circular(10)),
-                                        ),
-                                        Container(
-                                          width: screenWidth(1.8),
-                                          height: screenWidth(3.5),
-                                          decoration: BoxDecoration(
-                                              borderRadius:
-                                                  BorderRadius.circular(10)),
-                                          child: Column(
-                                            children: [
-                                              Padding(
-                                                padding:
-                                                    const EdgeInsets.all(8.0),
-                                                child: Text(
-                                                  "نادي الكرامة الرياضي نادي الكرامة الرياضي نادي الكرامة الرياضي نادي الكرامة الرياضي نادي الكرامة الريا",
-                                                  style: TextStyle(
-                                                      fontSize:
-                                                          screenWidth(24)),
-                                                  maxLines: 2,
-                                                ),
-                                              ),
-                                              Padding(
-                                                padding:
-                                                    EdgeInsetsDirectional.only(
-                                                        top: screenWidth(70)),
-                                                child: Row(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment
-                                                          .spaceAround,
-                                                  children: [
-                                                    Row(
-                                                      children: [
-                                                        Icon(
-                                                          Icons
-                                                              .remove_red_eye_outlined,
-                                                          size: screenWidth(20),
-                                                        ),
-                                                        Text(
-                                                          " 300 ",
-                                                          style: TextStyle(
-                                                              fontSize:
-                                                                  screenWidth(
-                                                                      26)),
-                                                        ),
-                                                      ],
-                                                    ),
-                                                    Row(
-                                                      children: [
-                                                        Icon(
-                                                          Icons
-                                                              .watch_later_outlined,
-                                                          size: screenWidth(22),
-                                                        ),
-                                                        Text(
-                                                          " 4 ",
-                                                          style: TextStyle(
-                                                              fontSize:
-                                                                  screenWidth(
-                                                                      26)),
-                                                        ),
-                                                        Text(
-                                                          "أيام",
-                                                          style: TextStyle(
-                                                              fontSize:
-                                                                  screenWidth(
-                                                                      26)),
-                                                        )
-                                                      ],
-                                                    ),
-                                                  ],
-                                                ),
-                                              )
-                                            ],
-                                          ),
-                                        )
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ]),
+                              child: CustomNews(),
+                            );
+                          },
+                        ),
                       ),
                     ],
                   ),

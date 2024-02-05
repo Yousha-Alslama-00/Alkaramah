@@ -35,10 +35,11 @@ class _MainViewState extends State<MainView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: PreferredSize(
-            child: CustomAppBar(
-              title: appBarTitle[pageIndex],
-            ),
-            preferredSize: Size.fromHeight(75)),
+          child: CustomAppBar(
+            title: appBarTitle[pageIndex],
+          ),
+          preferredSize: Size.fromHeight(75),
+        ),
         floatingActionButton: Padding(
           padding: EdgeInsetsDirectional.only(top: screenWidth(30)),
           child: InkWell(
@@ -53,10 +54,14 @@ class _MainViewState extends State<MainView> {
               width: screenWidth(5),
               height: screenWidth(5),
               decoration: BoxDecoration(
-                  color: AppColors.blueColor,
-                  borderRadius: BorderRadiusDirectional.circular(60),
-                  image: DecorationImage(
-                      image: AssetImage("assets/images/pngs/rectangle.png"))),
+                color: AppColors.blueColor,
+                borderRadius: BorderRadiusDirectional.circular(60),
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assets/images/pngs/rectangle.png",
+                  ),
+                ),
+              ),
             ),
           ),
         ),

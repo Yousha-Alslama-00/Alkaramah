@@ -2,6 +2,7 @@ import 'package:alkaramah/ui/shared/colors.dart';
 import 'package:alkaramah/ui/shared/utils.dart';
 import 'package:alkaramah/ui/views/main_view/main_view_widgets/nav_item.dart';
 import 'package:flutter/material.dart';
+
 enum BottomNavigationEnum {
   HOME,
   RESULTS,

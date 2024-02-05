@@ -1,9 +1,9 @@
-
 import 'package:alkaramah/ui/shared/colors.dart';
 import 'package:alkaramah/ui/shared/utils.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+
 class MainNewsView extends StatefulWidget {
   const MainNewsView({super.key});
 

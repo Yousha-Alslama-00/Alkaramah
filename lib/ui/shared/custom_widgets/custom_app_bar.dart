@@ -1,6 +1,7 @@
 import 'package:alkaramah/ui/shared/colors.dart';
 import 'package:alkaramah/ui/shared/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String title;
@@ -22,6 +23,10 @@ class CustomAppBar extends StatelessWidget {
               children: [
                 Row(
                   children: [
+                    SizedBox(
+                      width: screenWidth(6),
+                      child: Image.asset("assets/images/pngs/rectangle.png"),
+                    ),
                     Text(
                       title,
                       textAlign: TextAlign.end,
@@ -30,21 +35,50 @@ class CustomAppBar extends StatelessWidget {
                           fontSize: screenWidth(20),
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
-                        width: screenWidth(10),
-                        child: Image.asset("assets/images/pngs/rectangle.png")),
                   ],
                 ),
                 Row(
                   children: [
-                    Icon(
-                      Icons.arrow_back_ios,
-                      color: AppColors.whiteColor,
+                    InkWell(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: Icon(
+                        Icons.arrow_back_ios,
+                        color: AppColors.whiteColor,
+                        size: screenWidth(15.75),
+                      ),
                     ),
                     SizedBox(
-                        width: screenWidth(10),
-                        height: screenWidth(10),
-                        child: Image.asset("assets/images/pngs/typeBall.png")),
+                      width: screenWidth(10),
+                      height: screenWidth(10),
+                      child: Stack(
+                        children: [
+                          Image.asset("assets/images/pngs/type_ball.png"),
+                          Padding(
+                            padding: EdgeInsetsDirectional.only(
+                              bottom: screenWidth(82.28),
+                            ),
+                            child: Center(
+                              child: Container(
+                                width: screenWidth(13.71),
+                                height: screenWidth(13.71),
+                                decoration: BoxDecoration(
+                                  color: AppColors.mainblueColor,
+                                  borderRadius: BorderRadius.circular(30),
+                                  image: DecorationImage(
+                                    image: NetworkImage(
+                                      'https://th.bing.com/th/id/R.1395d1b17397018e6916784c283a14f2?rik=bmfmSW7odc2D1A&pid=ImgRaw&r=0',
+                                    ),
+                                    fit: BoxFit.cover,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ],
