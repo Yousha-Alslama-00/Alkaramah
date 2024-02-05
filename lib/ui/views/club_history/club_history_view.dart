@@ -1,24 +1,41 @@
+import 'package:alkaramah/ui/shared/custom_widgets/custom_app_bar.dart';
 import 'package:alkaramah/ui/shared/custom_widgets/custom_container_horizontal.dart';
 import 'package:alkaramah/ui/shared/custom_widgets/custom_container_vertical.dart';
 import 'package:alkaramah/ui/shared/custom_widgets/custom_text.dart';
 import 'package:alkaramah/ui/shared/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
-class AboutClup extends StatefulWidget {
-  const AboutClup({super.key});
+class ClubHistoryView extends StatelessWidget {
+  const ClubHistoryView({super.key});
 
-  @override
-  State<AboutClup> createState() => _AboutClupState();
-}
-
-class _AboutClupState extends State<AboutClup> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: PreferredSize(
+        child: CustomAppBar(
+          title: 'تاريخ النادي',
+        ),
+        preferredSize: Size.fromHeight(75),
+      ),
       body: Container(
         child: ListView(
           shrinkWrap: true,
           children: [
+            Container(
+              margin: EdgeInsetsDirectional.only(
+                end: screenWidth(1.24),
+              ),
+              child: InkWell(
+                onTap: () {
+                  Get.back();
+                },
+                child: Icon(
+                  Icons.arrow_back_ios,
+                  size: screenWidth(11.75),
+                ),
+              ),
+            ),
             SizedBox(
               height: screenWidth(41.1428),
             ),
@@ -105,18 +122,6 @@ class _AboutClupState extends State<AboutClup> {
             SizedBox(
               height: screenWidth(41.1428),
             ),
-/************************************************************* */
-            // ClubPresidents(
-            //   networkImage: 'https://picsum.photos/200/300',
-            //   textName: 'Yousha\nAlslama',
-            // ),
-/************************************************************** */
-
-            // ClubTitles(
-            //   textTitles: 'Yousha\nAlslama',
-            //   networkImage: 'https://picsum.photos/200/300',
-            // ),
-/************************************************************** */
           ],
         ),
       ),
