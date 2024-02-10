@@ -7,7 +7,6 @@ import 'package:alkaramah/ui/shared/custom_widgets/custom_container_youtube.dart
 import 'package:alkaramah/ui/shared/custom_widgets/custom_text.dart';
 import 'package:alkaramah/ui/shared/utils.dart';
 import 'package:alkaramah/ui/views/club_history/club_history_view.dart';
-import 'package:alkaramah/ui/views/main_view/news_view/news_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

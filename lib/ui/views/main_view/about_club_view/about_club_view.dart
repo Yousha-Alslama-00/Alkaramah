@@ -39,8 +39,8 @@ class AboutClubView extends StatelessWidget {
                   Row(
                     children: [
                       Container(
-                        width: screenWidth(2.057),
-                        height: screenWidth(2.057),
+                        width: screenWidth(2.5),
+                        height: screenWidth(2),
                         decoration: BoxDecoration(
                           image: DecorationImage(
                             image: AssetImage(
@@ -55,8 +55,9 @@ class AboutClubView extends StatelessWidget {
                         ),
                         child: CustomText(
                           text: 'رئيس نادي الكرامة : \nالدكتور عهد خزام',
-                          styleType: TextStyleType.TITLE,
+                          styleType: TextStyleType.SUBTITLE,
                           textColor: AppColors.whiteColor,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ],
@@ -121,7 +122,7 @@ class AboutClubView extends StatelessWidget {
               margin: EdgeInsetsDirectional.only(
                 top: screenWidth(41.1428),
               ),
-              height: screenHeight(3.3),
+              height: screenHeight(2.5),
               child: Padding(
                 padding: EdgeInsetsDirectional.only(
                   start: screenWidth(41.1428),
@@ -167,7 +168,7 @@ class AboutClubView extends StatelessWidget {
               margin: EdgeInsetsDirectional.only(
                 top: screenWidth(41.1428),
               ),
-              height: screenHeight(3.3),
+              height: screenHeight(2.5),
               child: Padding(
                 padding: EdgeInsetsDirectional.only(
                   start: screenWidth(41.1428),
@@ -213,7 +214,7 @@ class AboutClubView extends StatelessWidget {
               margin: EdgeInsetsDirectional.only(
                 top: screenWidth(41.1428),
               ),
-              height: screenHeight(3.3),
+              height: screenHeight(2.5),
               child: Padding(
                 padding: EdgeInsetsDirectional.only(
                   start: screenWidth(41.1428),
@@ -263,7 +264,7 @@ class AboutClubView extends StatelessWidget {
               margin: EdgeInsetsDirectional.only(
                 top: screenWidth(41.1428),
               ),
-              height: screenHeight(3.3),
+              height: screenHeight(2.5),
               child: Padding(
                 padding: EdgeInsetsDirectional.only(
                   start: screenWidth(41.1428),
@@ -312,7 +313,7 @@ class AboutClubView extends StatelessWidget {
               margin: EdgeInsetsDirectional.only(
                 top: screenWidth(41.1428),
               ),
-              height: screenHeight(3.3),
+              height: screenHeight(2.5),
               child: Padding(
                 padding: EdgeInsetsDirectional.only(
                   start: screenWidth(41.1428),
@@ -361,7 +362,7 @@ class AboutClubView extends StatelessWidget {
               margin: EdgeInsetsDirectional.only(
                 top: screenWidth(41.1428),
               ),
-              height: screenHeight(3.3),
+              height: screenHeight(2.5),
               child: Padding(
                 padding: EdgeInsetsDirectional.only(
                   start: screenWidth(41.1428),

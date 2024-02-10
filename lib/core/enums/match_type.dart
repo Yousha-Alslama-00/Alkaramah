@@ -1,0 +1,5 @@
+enum MatchType {
+  TEAMPLAN,
+  TEAMSUBSSTITUTIONS,
+  RESERVELIST,
+}

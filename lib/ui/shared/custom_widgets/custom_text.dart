@@ -19,7 +19,7 @@ class CustomText extends StatelessWidget {
 
   const CustomText({
     super.key,
-    required this.text,
+    this.text,
     this.styleType = TextStyleType.BODY,
     this.textColor = AppColors.blackColor,
     this.fontWeight,

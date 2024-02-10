@@ -88,7 +88,8 @@ class _HomeViewState extends State<HomeView> {
                                                     SizedBox(
                                                       width: screenWidth(10),
                                                       child: Image.asset(
-                                                          "assets/images/pngs/Rectangle 27.png"),
+                                                        "assets/images/pngs/Rectangle 27.png",
+                                                      ),
                                                     ),
                                                     Text(
                                                       "ALKARAMA",
@@ -114,7 +115,8 @@ class _HomeViewState extends State<HomeView> {
                                                     SizedBox(
                                                       width: screenWidth(10),
                                                       child: Image.asset(
-                                                          "assets/images/pngs/Rectangle 27.png"),
+                                                        "assets/images/pngs/Rectangle 27.png",
+                                                      ),
                                                     ),
                                                     Text(
                                                       "ALKARAMA",
@@ -197,7 +199,8 @@ class _HomeViewState extends State<HomeView> {
                           activeSize: const Size(20, 10),
                           activeColor: AppColors.orangeColor,
                           activeShape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(5.0)),
+                            borderRadius: BorderRadius.circular(5.0),
+                          ),
                         ),
                       )
                     ],
@@ -238,7 +241,7 @@ class _HomeViewState extends State<HomeView> {
                       ),
                       Container(
                         width: screenWidth(1),
-                        height: screenHeight(5.5),
+                        height: screenHeight(4.6),
                         child: ListView.builder(
                           scrollDirection: Axis.horizontal,
                           itemCount: 10,

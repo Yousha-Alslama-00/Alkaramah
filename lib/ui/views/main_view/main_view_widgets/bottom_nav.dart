@@ -29,9 +29,12 @@ class _BgNavState extends State<BgNav> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-          color: AppColors.blueColor,
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(20), topRight: Radius.circular(20))),
+        color: AppColors.blueColor,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
+      ),
       height: screenWidth(5),
       child: Padding(
         padding: EdgeInsetsDirectional.only(top: screenWidth(40)),
