@@ -33,6 +33,8 @@ class _MainViewState extends State<MainView> {
 
   @override
   Widget build(BuildContext context) {
+    // final size = MediaQuery.of(context).size;
+    // print(size.width); //! لمعرفة حجم شاشة موبايل
     return Scaffold(
         appBar: PreferredSize(
           child: CustomAppBar(

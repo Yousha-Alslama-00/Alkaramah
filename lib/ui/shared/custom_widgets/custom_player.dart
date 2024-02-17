@@ -124,7 +124,7 @@ class CustomAdminsPlayers extends StatelessWidget {
                     start: screenWidth(82.28),
                     end: screenWidth(82.28),
                   ),
-                  height: screenWidth(3.42),
+                  height: screenWidth(2.8),
                   decoration: BoxDecoration(
                     color: color ?? AppColors.blueColor,
                     borderRadius: BorderRadius.only(
@@ -157,7 +157,7 @@ class CustomAdminsPlayers extends StatelessWidget {
                       textColor: AppColors.whiteColor,
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
                           width: screenWidth(9.79),

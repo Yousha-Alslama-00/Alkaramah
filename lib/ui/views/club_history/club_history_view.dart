@@ -4,7 +4,6 @@ import 'package:alkaramah/ui/shared/custom_widgets/custom_container_vertical.dar
 import 'package:alkaramah/ui/shared/custom_widgets/custom_text.dart';
 import 'package:alkaramah/ui/shared/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class ClubHistoryView extends StatelessWidget {
   const ClubHistoryView({super.key});
@@ -22,20 +21,6 @@ class ClubHistoryView extends StatelessWidget {
         child: ListView(
           shrinkWrap: true,
           children: [
-            Container(
-              margin: EdgeInsetsDirectional.only(
-                end: screenWidth(1.24),
-              ),
-              child: InkWell(
-                onTap: () {
-                  Get.back();
-                },
-                child: Icon(
-                  Icons.arrow_back_ios,
-                  size: screenWidth(11.75),
-                ),
-              ),
-            ),
             SizedBox(
               height: screenWidth(41.1428),
             ),

@@ -48,6 +48,4 @@ Locale getLocal() {
     return Locale('fr', 'FR');
 }
 
-
-
 //Get.toNamed('/details');
