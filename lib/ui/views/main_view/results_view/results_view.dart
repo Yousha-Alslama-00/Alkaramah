@@ -1,11 +1,19 @@
 import 'package:alkaramah/ui/shared/colors.dart';
 import 'package:alkaramah/ui/shared/custom_widgets/custom_text.dart';
 import 'package:alkaramah/ui/shared/utils.dart';
+import 'package:alkaramah/ui/views/main_view/results_view/tabel/tabel_content.dart';
+import 'package:alkaramah/ui/views/main_view/results_view/tabel/tabel_header.dart';
 import 'package:flutter/material.dart';
 
-class ResultsView extends StatelessWidget {
+class ResultsView extends StatefulWidget {
   const ResultsView({super.key});
 
+  @override
+  State<ResultsView> createState() => _ResultsViewState();
+}
+
+class _ResultsViewState extends State<ResultsView> {
+  bool showTable10 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,19 +27,19 @@ class ResultsView extends StatelessWidget {
           children: [
             Padding(
               padding: EdgeInsetsDirectional.only(
-                top: 20,
-                bottom: 20,
+                top: screenWidth(20.57),
+                bottom: screenWidth(20.57),
               ),
               child: Container(
-                height: 100,
+                height: screenWidth(4.11),
                 decoration: BoxDecoration(
                   color: AppColors.greyColor2,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Padding(
                   padding: EdgeInsetsDirectional.only(
-                    start: 15,
-                    end: 15,
+                    start: screenWidth(27.42),
+                    end: screenWidth(27.42),
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -39,15 +47,15 @@ class ResultsView extends StatelessWidget {
                       InkWell(
                         child: Image.asset(
                           'assets/images/pngs/ic_rewand.png',
-                          width: 20,
+                          width: screenWidth(20.57),
                         ),
                       ),
                       Container(
-                        width: 90,
+                        width: screenWidth(4.57),
                         decoration: BoxDecoration(),
                         child: Padding(
                           padding: EdgeInsetsDirectional.only(
-                            top: 10,
+                            top: screenWidth(41.14),
                           ),
                           child: Column(
                             children: [
@@ -65,7 +73,7 @@ class ResultsView extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: 90,
+                        width: screenWidth(4.57),
                         decoration: BoxDecoration(
                           border: Border(
                             bottom: BorderSide(
@@ -84,7 +92,7 @@ class ResultsView extends StatelessWidget {
                         ),
                         child: Padding(
                           padding: EdgeInsetsDirectional.only(
-                            top: 10,
+                            top: screenWidth(41.14),
                           ),
                           child: Column(
                             children: [
@@ -102,11 +110,11 @@ class ResultsView extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        width: 90,
+                        width: screenWidth(4.57),
                         decoration: BoxDecoration(),
                         child: Padding(
                           padding: EdgeInsetsDirectional.only(
-                            top: 10,
+                            top: screenWidth(41.14),
                           ),
                           child: Column(
                             children: [
@@ -129,16 +137,17 @@ class ResultsView extends StatelessWidget {
               ),
             ),
             Container(
-              height: 220,
+              height: screenWidth(1.87),
               child: ListView.builder(
+                shrinkWrap: true,
                 reverse: true,
                 scrollDirection: Axis.horizontal,
                 itemCount: 3,
-                itemExtent: 375,
+                itemExtent: screenWidth(1.09),
                 itemBuilder: (BuildContext context, int index) {
                   return Container(
                     width: screenWidth(1),
-                    height: 220,
+                    height: screenWidth(1.87),
                     decoration: BoxDecoration(),
                     child: Stack(
                       children: [
@@ -152,13 +161,13 @@ class ResultsView extends StatelessWidget {
                           children: [
                             Padding(
                               padding: EdgeInsetsDirectional.only(
-                                top: 50,
+                                top: screenWidth(8.22),
                               ),
                               child: Column(
                                 children: [
                                   Container(
-                                    width: 70,
-                                    height: 70,
+                                    width: screenWidth(5.87),
+                                    height: screenWidth(5.87),
                                     decoration: BoxDecoration(
                                       color: Colors.cyan,
                                       image: DecorationImage(
@@ -173,7 +182,7 @@ class ResultsView extends StatelessWidget {
                                     text: 'الكرامة',
                                     styleType: TextStyleType.CUSTOM,
                                     textColor: AppColors.whiteColor,
-                                    fontSize: 26,
+                                    fontSize: screenWidth(15.82),
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ],
@@ -188,19 +197,19 @@ class ResultsView extends StatelessWidget {
                                       text: 'الجمعة  22/12/2022',
                                       styleType: TextStyleType.CUSTOM,
                                       textColor: AppColors.whiteColor,
-                                      fontSize: 20,
+                                      fontSize: screenWidth(20.57),
                                       textAlign: TextAlign.center,
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.only(
-                                        top: 30,
-                                        start: 55,
+                                        top: screenWidth(13.71),
+                                        start: screenWidth(7.48),
                                       ),
                                       child: CustomText(
                                         text: '12:12 عصرا',
                                         styleType: TextStyleType.CUSTOM,
                                         textColor: AppColors.whiteColor,
-                                        fontSize: 15,
+                                        fontSize: screenWidth(27.42),
                                       ),
                                     ),
                                   ],
@@ -217,27 +226,21 @@ class ResultsView extends StatelessWidget {
                                       styleType: TextStyleType.CUSTOM,
                                       fontWeight: FontWeight.bold,
                                       textColor: AppColors.maingreenColor,
-                                      fontSize: 45,
+                                      fontSize: screenWidth(9.14),
                                     ),
                                     CustomText(
                                       text: '1',
                                       styleType: TextStyleType.CUSTOM,
                                       fontWeight: FontWeight.bold,
                                       textColor: AppColors.maingreenColor,
-                                      fontSize: 45,
+                                      fontSize: screenWidth(9.14),
                                     ),
                                   ],
                                 ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.only(
-                                      // top: 10,
-                                      ),
-                                  child: CustomText(
-                                    text: 'الجولة',
-                                    textColor: AppColors.whiteColor,
-                                    // styleType: TextStyleType.SUBTITLE,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                CustomText(
+                                  text: 'الجولة',
+                                  textColor: AppColors.whiteColor,
+                                  fontWeight: FontWeight.bold,
                                 ),
                                 CustomText(
                                   text: '23',
@@ -249,13 +252,13 @@ class ResultsView extends StatelessWidget {
                             ),
                             Padding(
                               padding: EdgeInsetsDirectional.only(
-                                top: 50,
+                                top: screenWidth(8.22),
                               ),
                               child: Column(
                                 children: [
                                   Container(
-                                    width: 70,
-                                    height: 70,
+                                    width: screenWidth(5.87),
+                                    height: screenWidth(5.87),
                                     decoration: BoxDecoration(
                                       color: Colors.cyan,
                                       image: DecorationImage(
@@ -270,7 +273,7 @@ class ResultsView extends StatelessWidget {
                                     text: 'الكرامة',
                                     styleType: TextStyleType.CUSTOM,
                                     textColor: AppColors.whiteColor,
-                                    fontSize: 26,
+                                    fontSize: screenWidth(15.82),
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ],
@@ -284,82 +287,98 @@ class ResultsView extends StatelessWidget {
                 },
               ),
             ),
-            SizedBox(
-              height: 50,
+            //! *********************************************************** */
+
+            Padding(
+              padding: EdgeInsetsDirectional.only(
+                top: screenWidth(27.42),
+                bottom: screenWidth(27.42),
+              ),
+              child: InkWell(
+                onTap: () {
+                  setState(() {
+                    showTable10 = !showTable10;
+                  });
+                },
+                child: Container(
+                  height: screenWidth(8.22),
+                  decoration: BoxDecoration(
+                    color: AppColors.orangeColor,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Center(
+                    child: CustomText(
+                      text: showTable10 ? 'إخفاء الجدول' : 'عرض الجدول',
+                      styleType: TextStyleType.SUBTITLE,
+                      textColor: AppColors.whiteColor,
+                    ),
+                  ),
+                ),
+              ),
             ),
-            DataTable(
-                headingTextStyle: TextStyle(color: Colors.white),
-                columnSpacing: 10,
-                showBottomBorder: true,
-                border: TableBorder.all(color: Colors.grey),
-                columns: [
-                  DataColumn(label: Text("نقاط")),
-                  DataColumn(label: Text("خسر")),
-                  DataColumn(label: Text("تعادل")),
-                  DataColumn(label: Text("فاز")),
-                  DataColumn(label: Text("لعب")),
-                  DataColumn(label: Text("الفريق")),
-                  DataColumn(label: Text("ترتيب"))
-                ],
-                rows: [
-                  DataRow(
-                    cells: [
-                      DataCell(Text("5")),
-                      DataCell(Text("2")),
-                      DataCell(Text("2")),
-                      DataCell(Text("1")),
-                      DataCell(Text("5")),
-                      DataCell(Text("الجيش")),
-                      DataCell(Text("8"))
-                    ],
+            Stack(
+              children: [
+                Image.asset(
+                  'assets/images/pngs/layer2.png',
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.only(
+                    top: screenWidth(20.57),
+                    start: screenWidth(13.71),
                   ),
-                  DataRow(
-                    cells: [
-                      DataCell(Text("5")),
-                      DataCell(Text("2")),
-                      DataCell(Text("2")),
-                      DataCell(Text("1")),
-                      DataCell(Text("5")),
-                      DataCell(Text("الجيش")),
-                      DataCell(Text("8"))
-                    ],
+                  child: CustomText(
+                    text: 'جدول ترتيب الفرق الدوري السوري  2024/2023',
+                    styleType: TextStyleType.SUBTITLE,
+                    textColor: AppColors.whiteColor,
                   ),
-                  DataRow(
-                    cells: [
-                      DataCell(Text("5")),
-                      DataCell(Text("2")),
-                      DataCell(Text("2")),
-                      DataCell(Text("1")),
-                      DataCell(Text("5")),
-                      DataCell(Text("الجيش")),
-                      DataCell(Text("8"))
-                    ],
+                ),
+                Padding(
+                  padding: EdgeInsetsDirectional.only(
+                    top: screenWidth(7.09),
                   ),
-                  DataRow(
-                    cells: [
-                      DataCell(Text("5")),
-                      DataCell(Text("2")),
-                      DataCell(Text("2")),
-                      DataCell(Text("1")),
-                      DataCell(Text("5")),
-                      DataCell(Text("الجيش")),
-                      DataCell(Text("8"))
-                    ],
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(20),
+                        bottomRight: Radius.circular(20),
+                      ),
+                      color: AppColors.maingreyColor,
+                    ),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.only(
+                        top: screenWidth(20.57),
+                        bottom: screenWidth(20.57),
+                      ),
+                      child: ListView.builder(
+                        physics: NeverScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        itemCount: showTable10 == true ? 16 : 6,
+                        itemBuilder: (context, index) {
+                          if (index == 0) {
+                            // الصف الأول: تثبيت الصف الأول
+                            return TabelHeader();
+                          } else {
+                            // الصفوف الباقية: إرسال قيم في الصفوف الباقية
+                            return TabelContent(
+                              ranking: '$index',
+                              clubName: ' يوسف $index',
+                              game: '$index',
+                              win: '$index',
+                              draw: '$index',
+                              lost: '$index',
+                              points: '$index',
+                            );
+                          }
+                        },
+                      ),
+                    ),
                   ),
-                  DataRow(
-                    cells: [
-                      DataCell(Text("5")),
-                      DataCell(Text("2")),
-                      DataCell(Text("2")),
-                      DataCell(Text("1")),
-                      DataCell(Text("5")),
-                      DataCell(Text("الجيش")),
-                      DataCell(Text("8"))
-                    ],
-                  ),
-                ]),
+                ),
+              ],
+            ),
+
             SizedBox(
-              height: 50,
+              height: screenWidth(8.22),
             ),
           ],
         ),

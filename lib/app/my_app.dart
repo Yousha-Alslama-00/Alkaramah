@@ -4,8 +4,6 @@ import 'package:alkaramah/core/services/connectivity_service.dart';
 import 'package:alkaramah/core/translation/app_translation.dart';
 import 'package:alkaramah/ui/shared/utils.dart';
 import 'package:alkaramah/ui/views/main_view/main_view.dart';
-import 'package:alkaramah/ui/views/main_view/results_view/test.dart';
-
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -34,7 +32,6 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: MainView(),
-        // home: DataTablePage(),
       ),
     );
   }
